@@ -1,0 +1,252 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url('../img/background.png');
+    font-family: 'segoe', sans-serif;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 1000;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    width: 660px;
+    min-height: 680px;
+    background-color: white;
+    padding: 32px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #dcb3a9;
+    border-radius: 10px;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin: 0 0 3em;
+   
+}
+
+.deck .card {
+    height: 125px;
+    width: 125px;
+    background-image: url(../img/bgCard.jpg);
+    font-size: 0;
+    color: #ff00c8;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border: solid 1px #b0e8e5;
+}
+
+.deck .card.open {
+    transform: rotateY(0) !important;
+    background: pink;
+    cursor: default;
+}
+
+.deck .card.show {
+    font-size: 50px;
+    color: white;
+}
+
+.deck .card.match {
+    cursor: default;
+    background: #02ccba;
+    font-size: 50px;
+    color: white;
+    padding: 10px;
+    background-color: #19bfb7;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    -webkit-animation: bounce 0.8s ease-out;
+    -moz-animation: bounce 800ms ease-out;
+    -o-animation: bounce 800ms ease-out;
+    animation: bounce 0.8s ease-out;
+}
+
+.card:hover{
+    border: solid 2px #f29462;
+}
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+    text-align: left;
+    width: 345px;
+    margin-bottom: 10px;
+}
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+    color: black;
+   
+}
+
+/*
+/* Webkit, Chrome and Safari */
+
+@-webkit-keyframes bounce {
+    70% {
+        -webkit-transform:translateY(-15%);
+    }
+    75% {
+        -webkit-transform:translateY(0);
+        padding: 8px auto;
+    }
+    80% {
+        -webkit-transform:translateY(-10%);
+    }
+    85% {
+        -webkit-transform:translateY(0);
+        padding: 8px auto;
+    }
+    90% {
+        -webkit-transform:translateY(-5%);
+    }
+    95% {
+        -webkit-transform:translateY(0);
+        padding: 10px;
+    }
+    100% {
+        -webkit-transform:translateY(0);
+        padding: 10px;
+    }
+}
+
+/* Mozilla Firefox 15 below */
+@-moz-keyframes bounce {
+  70% {
+    -moz-transform:translateY(0%);
+    padding-bottom: 7px;
+  }
+  80% {
+    -moz-transform:translateY(-15%);
+  }
+  90% {
+    -moz-transform:translateY(0%);
+    padding-bottom: 8px;
+  }
+  95% {
+    -moz-transform:translateY(-10%);
+  }
+  97% {
+    -moz-transform:translateY(0%);
+    padding-bottom: 9px;
+  }
+  99% {
+    -moz-transform:translateY(-5%);
+  }
+  100% {
+    -moz-transform:translateY(0);
+    padding-bottom: 9px;
+    opacity: 1;
+  }
+}
+
+/* Opera 12.0 */
+@-o-keyframes bounce {
+  70% {
+    -o-transform:translateY(0%);
+    padding-bottom: 7px;
+  }
+  80% {
+    -o-transform:translateY(-15%);
+  }
+  90% {
+    -o-transform:translateY(0%);
+    padding-bottom: 8px;
+  }
+  95% {
+    -o-transform:translateY(-10%);
+  }
+  97% {
+    -o-transform:translateY(0%);
+    padding-bottom: 9px;
+  }
+  99% {
+    -o-transform:translateY(-5%);
+  }
+  100% {
+    -o-transform:translateY(0);
+    padding-bottom: 9px;
+    opacity: 1;
+  }
+}
+
+/* W3, Opera 12+, Firefox 16+ */
+@keyframes bounce {
+ 70% {
+    transform:translateY(0%);
+    padding-bottom: 7px;
+  }
+  80% {
+    transform:translateY(-15%);
+  }
+  90% {
+    transform:translateY(0%);
+    padding-bottom: 8px;
+  }
+  95% {
+    transform:translateY(-7%);
+  }
+  97% {
+    transform:translateY(0%);
+    padding-bottom: 9px;
+  }
+  99% {
+    transform:translateY(-3%);
+  }
+  100% {
+    transform:translateY(0);
+    padding-bottom: 9px;
+    opacity: 1;
+  }
+}
