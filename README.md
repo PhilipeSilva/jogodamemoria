@@ -25,8 +25,5 @@ Contruibuição de instrutores da Udacity
 * CSS 
 * HTML
 
-## Link de acesso ao jogo:
-http://philipesilva.com.br/jogodamemoria/jogodamemoria-master/index.html
-
 ## Link de acesso aos codigos do repositorio:
 https://github.com/PhilipeSilva/jogodamemoria
